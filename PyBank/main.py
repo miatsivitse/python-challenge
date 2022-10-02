@@ -1,29 +1,39 @@
 import os
 import csv
 
-csvpath = os.path.join('Resources','budget_data.csv')
-
-with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=",")
-    print (csvreader)
-
-    csv_header = next(csvreader)
-    print(f"csvheader: {csv_header}")
-
-    # for row in csvreader:
-    #     print(row[0])
-
-    date = 0
-    for row in open('budget_data.csv'):
-        date += 1
-        print (date)
-
-total_months = date
-total_profit = 
-average_change = 
+csvpath = os.path.join("Resources","budget_data.csv")
+output_path = os.path.join("Analysis", "PyBank_results.txt")
 
 print ("Financial Analysis")
 print ("------------------")
-print ("Total Months: " + str(total_months))
-print("Total: $" + str(total_profit))
-print (f"Total: ${average_change}")
+
+with open(csvpath) as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    csv_header = next(csvreader)
+
+    months = csvreader
+    def month_year(month):
+        month_count = 0
+        for i in month:
+            month_count +=1
+
+        return month_count
+    var=month_year(months)
+    print("Total Months:" + str(var))
+
+    
+
+with open(output_path, "w") as txtfile:
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("------------------\n")
+    txtfile.write("Total Months:" + str(var) + "\n")
+    txtfile.close()
+
+# total_profit = 
+# average_change = 
+# profit_increase = 
+# profit_decrease = 
+
+# print ("Total Months: " + int(total_months))
+# print("Total: $" + str(total_profit))
+# print (f"Total: ${average_change}")
