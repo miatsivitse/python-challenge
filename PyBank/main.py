@@ -11,6 +11,7 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvreader)
 
+# Calculate Total Months
     months = csvreader
     def month_year(month):
         month_count = 0
@@ -21,8 +22,18 @@ with open(csvpath) as csvfile:
     var=month_year(months)
     print("Total Months:" + str(var))
 
-    
+#Calculate net total amount of "Profit/Losses" over the entire period
+    total = csvreader
+    def profit_loss(total):
+        profit_losses = 0
+        for i in total:
+            profit_losses +=1
 
+        return total
+    var1=profit_loss(total)
+    print("Total:" + str(var1))
+
+#Write to .txt file
 with open(output_path, "w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("------------------\n")
