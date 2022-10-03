@@ -14,9 +14,10 @@ with open(csvpath) as csvfile:
     first_row = next(csvreader)
 
     for row in csvreader:
-        # total_months = row[0]
-        # total_net = row[1]
-        # net_change = total_net
+        total_months = row[0]
+        profit_loss = row[1]
+        total_net = profit_loss
+        net_change = total_net / total_months
         # net_change_list = net_change
 
         # total_months += 1
@@ -30,11 +31,6 @@ with open(csvpath) as csvfile:
         # prev_net = int(row[1])
         # net_change_list += [net_change]
         
-
-        months = row[0]
-        profit_loss = row[1]
-        net_change = profit_loss
-
 # Calculate Total Months
     months = csvreader
     def month_year(month):
@@ -48,17 +44,15 @@ with open(csvpath) as csvfile:
 
 #Calculate net total amount of "Profit/Losses" over the entire period
 
+    total = csvreader
+    def profit_loss(total):
+        profit_losses = 0
+        for i in total:
+            profit_losses +=1
 
-
-    # total = csvreader
-    # def profit_loss(total):
-    #     profit_losses = 0
-    #     for i in total:
-    #         profit_losses +=1
-
-    #     return profit_losses
-    # var1=profit_loss(total)
-    # print("Total:" + str(var1))
+        return profit_losses
+    var1=profit_loss(total)
+    print("Total:" + str(var1))
 
 #Average Change
 
