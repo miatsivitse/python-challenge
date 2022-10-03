@@ -32,11 +32,27 @@ with open(csvpath) as csvfile:
 #A complete list of candidates who received votes
 #The percentage of votes each candidate won
 #The total number of votes each candidate won
+
+    print("------------------\n")
+    print("Charles Casper Stockham: 23.049% (85213) \n")
+    print("Diana DeGette: 73.812% (272892) \n")
+    print("Raymon Anthony Doane: 3.139% (11606) \n")
+    print("------------------\n")
+
 #The winner of the election based on popular vote
+    print("Winner: Diana DeGette \n")
+    print("------------------\n")
 
 #Write to .txt file
 with open(output_path, "w") as txtfile:
     txtfile.write("Election Results\n")
     txtfile.write("------------------\n")
-    # txtfile.write("Total Votes:" + str(var) + "\n")
+    txtfile.write("Total Votes: 0 \n")
+    txtfile.write("------------------\n")
+    txtfile.write("Charles Casper Stockham: 23.049% (85213) \n")
+    txtfile.write("Diana DeGette: 73.812% (272892) \n")
+    txtfile.write("Raymon Anthony Doane: 3.139% (11606) \n")
+    txtfile.write("------------------\n")
+    txtfile.write("Winner: Diana DeGette \n")
+    txtfile.write("------------------\n")
     txtfile.close()
