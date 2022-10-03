@@ -16,9 +16,9 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         total_months = row[0]
         profit_loss = row[1]
-        total_net = profit_loss
-        net_change = total_net / total_months
-        # net_change_list = net_change
+        # total_net = profit_loss
+        # net_change = total_net / total_months
+        # # net_change_list = net_change
 
         # total_months += 1
         # total_net += int(first_row[1])
@@ -55,18 +55,20 @@ with open(csvpath) as csvfile:
     print("Total:" + str(var1))
 
 #Average Change
-
+print("Average Change: 0")
 #Greatest Increase in Profits
-
-
-
+print("Greatest Increase in Profits: 0")
 #Greatest Decrease in Profits
+print("Greatest Decrease in Profits: 0")
 
 #Write to .txt file
 with open(output_path, "w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("------------------\n")
-    txtfile.write("Total Months:" + str(var) + "\n")
+    txtfile.write("Total Months: \n")
+    txtfile.write("Average Change: 0 \n")
+    txtfile.write("Greatest Increase in Profits: 0 \n")
+    txtfile.write("Greatest Decrease in Profits: 0 \n")
     txtfile.close()
 
 # total_profit = 
